@@ -1,0 +1,92 @@
+body {
+    padding: 0;
+    margin: 0;
+    /* transparent color */
+    background: linear-gradient(to right, darkblue, darkred);
+}
+
+.calculator-container {
+    /* gird enables access to row and columns */
+    display: grid;
+    /*  do not use all available space horizontally */
+    justify-content: center;
+    /*  Aligning the flex lines */
+    align-content: center;
+    /* space between buttons */
+    min-height: 100vh;
+    /* aligning forEx 1 2 3 * to be in the same row */
+    grid-template-columns: repeat(4,100px);
+    /* minmax so if the number is bigger then the rows will expand */
+    grid-template-rows: minmax(120px, auto) repeat(5,100px);
+}       
+
+
+
+
+/* select all buttons inside the container  */
+.calculator-container > button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: gray;
+}
+
+/* change colour when mouse over button */
+.calculator-container > button:hover{
+    background-color: lightgray;
+}
+
+/* increase the space for + and AC  */
+.span{
+    grid-column: span 2;  
+}
+
+.output{
+    /* inline-start and inline-end  */
+    grid-column: 1 / -1;
+    background-color: black;
+    display: flex;
+    align-items:flex-end;
+    /* add more space */
+    justify-content: space-around;
+    /* top left corner inherit column */
+    flex-direction: column;
+    padding: 10px;
+    /* fit the text inside the block */
+    word-wrap: break-word;
+    word-break:break-all;
+}
+
+/*  */
+
+.output .previous {
+    
+    color: lightgray;
+    font-size: 1.5rem;
+}
+
+.output .current{
+    color: white;
+    font-size: 2.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
