@@ -15,16 +15,13 @@ body {
     /* space between buttons */
     min-height: 100vh;
     /* aligning forEx 1 2 3 * to be in the same row */
-    grid-template-columns: repeat(4,100px);
+    grid-template-columns: repeat(4, 100px);
     /* minmax so if the number is bigger then the rows will expand */
-    grid-template-rows: minmax(120px, auto) repeat(5,100px);
-}       
-
-
-
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
 
 /* select all buttons inside the container  */
-.calculator-container > button{
+.calculator-container > button {
     cursor: pointer;
     font-size: 2rem;
     border: 1px solid white;
@@ -33,21 +30,21 @@ body {
 }
 
 /* change colour when mouse over button */
-.calculator-container > button:hover{
+.calculator-container > button:hover {
     background-color: lightgray;
 }
 
 /* increase the space for + and AC  */
-.span{
-    grid-column: span 2;  
+.span {
+    grid-column: span 2;
 }
 
-.output{
+.output {
     /* inline-start and inline-end  */
     grid-column: 1 / -1;
     background-color: black;
     display: flex;
-    align-items:flex-end;
+    align-items: flex-end;
     /* add more space */
     justify-content: space-around;
     /* top left corner inherit column */
@@ -55,18 +52,18 @@ body {
     padding: 10px;
     /* fit the text inside the block */
     word-wrap: break-word;
-    word-break:break-all;
+    word-break: break-all;
 }
 
 /*  */
 
 .output .previous {
-    
+
     color: lightgray;
     font-size: 1.5rem;
 }
 
-.output .current{
+.output .current {
     color: white;
     font-size: 2.5rem;
 }

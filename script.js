@@ -72,12 +72,6 @@ class Calculator {
         this.previousOperand = '';
     }
 
-    getDisplayNumber(number) {
-
-    }
-
-    /* */
-
     /* update the div tag current */
     updateDisplay() {
         this.currentOperandTextElement.innerText = this.currentOperand;
